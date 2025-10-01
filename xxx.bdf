@@ -1,0 +1,4 @@
+$Nastran load file exported from Simcenter STAR-CCM+ 20.02.008 (win64/clang17.0vc14.2-r8)
+$Units system: SI (m, kg, s, K)
+$$STAR_TIME=0, STAR_ITER=0, STAR_TIMESTEP=0
+$$STAR_END
