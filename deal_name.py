@@ -1,6 +1,6 @@
 import re 
 from pathlib import Path 
-
+from termcolor import cprint
 
 def deal_name(nasfile,outfile):
     def sub_func(match):
@@ -17,7 +17,10 @@ def deal_name(nasfile,outfile):
 
     content=Path(nasfile).read_text()
     new_content=re.sub(pattern,sub_func,content)
-    Path(outfile).write_text(new_content)
+    outfile=Path(outfile)
+    outfile.write_text(new_content)
+    cprint(f"new nastran file `{outfile.name}` is generated","green",attrs=["bold"])
+
 
 if __name__=="__main__":
     nasfile="./bulk.dat"
